@@ -1,0 +1,19 @@
+{
+  "name": "coffeeslice",
+  "version": "1.0.0",
+  "description": "A Sketch that can slice your icon to a new Artboard by a variable size given by yourself,making your icon touch to the edge of its viewBox by scaling and border testing automatically.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KivyGogh/Coffee-Slice.git"
+  },
+  "author": "goudan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KivyGogh/Coffee-Slice/issues"
+  },
+  "homepage": "https://github.com/KivyGogh/Coffee-Slice#readme"
+}
