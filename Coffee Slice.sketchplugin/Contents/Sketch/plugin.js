@@ -66,19 +66,16 @@ var onRun = function(context) {
         width = [frame width],
         scale;
 
-    if (height > width) {
+    if (height >= width) {
         scale = iconSize / height;
         height = iconSize;
         originWidth = scale * width;
         width = originWidth.toFixed(2)
-    } else if(height < width){
+    } else {
         scale = iconSize / width;
         width = iconSize;
         originHeight = scale * height;
         height = originHeight.toFixed(2)
-    }else{
-        height = iconSize;
-        width = iconSize;
     }
 
     layerFrame.setWidth(width)
