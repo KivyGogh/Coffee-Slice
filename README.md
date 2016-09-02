@@ -13,7 +13,7 @@ A small Sketch plugin that can slice your icon to a new Artboard by a variable s
 
 ### 1.Select the icon that you want to slice
 
-   ![Paste Cheatsheet](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/selectIcon.png)
+   ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/selectIcon.png =1000x429)
 
 ### 2.Slice selection:
 
@@ -21,11 +21,11 @@ A small Sketch plugin that can slice your icon to a new Artboard by a variable s
 
 ### 3.Give it a number of the icon's viewBox size
 
-   ![Paste Cheatsheet](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/inputSize.png)
+   ![input size](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/inputSize.png =400x255)
 
 ### 4.Your slice is readied!
 
-   ![Paste Cheatsheet](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/readied.png)
+   ![readied](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/readied.png =400x372)
 
 ## Feedback
 
