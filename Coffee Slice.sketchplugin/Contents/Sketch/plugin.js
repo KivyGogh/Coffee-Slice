@@ -62,7 +62,7 @@ var onRun = function(context) {
     var layerMiddle = sizeOffset(iconSize*2,layerSize*2);
     var layerBig = sizeOffset(iconSize*3,layerSize*3);
 
-    [doc showMessage: "Readied your slice!😉"];
+    [doc showMessage: "Readied your slices!😉"];
 
     var newLayerBig = createNewArtboardFromSelection(layer,3);
     newLayerBig.addLayer(layerBig)

@@ -25,7 +25,7 @@ A small Sketch plugin that can slice your icon to a new Artboard by a variable s
 
    ![input size](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/inputSize.png)
 
-### 4.Your slice is readied!
+### 4.Your slices are ready!
 
 The icon will duplicate in a new Artboard with the size you given before,a layer of Slice will ready in the top of new Artboard,just use the basic export of Sketch to get your slice!
 
