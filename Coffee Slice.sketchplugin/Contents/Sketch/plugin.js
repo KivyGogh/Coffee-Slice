@@ -49,51 +49,79 @@ var onRun = function(context) {
     var action = actionWithType("MSCanvasActions", context);
 
 
-    var a = MSSliceLayer.new(),
-        frame = a.frame();
+    var sliceSmall = creatSliceLayer(layerSize);
+    sliceSmall.setName("Undefined New Slice @1x");
 
-    frame.setWidth(layerSize);
-    frame.setHeight(layerSize);
+    var sliceMiddle = creatSliceLayer(layerSize*2);
+    sliceMiddle.setName("Undefined New Slice @2x");
 
-    a.setName("Undefined New Slice");
+    var sliceBig = creatSliceLayer(layerSize*3);
+    sliceBig.setName("Undefined New Slice @3x");
 
-    var layerCopy = layer.copy(),
-        layerFrame = layerCopy.frame()
+    var layerSmall = sizeOffset(iconSize,layerSize);
+    var layerMiddle = sizeOffset(iconSize*2,layerSize*2);
+    var layerBig = sizeOffset(iconSize*3,layerSize*3);
 
+    [doc showMessage: "Readied your slice!😉"];
 
-    var frame = [layer frame],
-        height = [frame height],
-        width = [frame width],
-        scale;
+    var newLayerBig = createNewArtboardFromSelection(layer,3);
+    newLayerBig.addLayer(layerBig)
+    newLayerBig.addLayer(sliceBig)
 
-    if (height >= width) {
-        scale = iconSize / height;
-        height = iconSize;
-        originWidth = scale * width;
-        width = originWidth.toFixed(2)
-    } else {
-        scale = iconSize / width;
-        width = iconSize;
-        originHeight = scale * height;
-        height = originHeight.toFixed(2)
-    }
+    var newLayerMiddle = createNewArtboardFromSelection(layer,2);
+    newLayerMiddle.addLayer(layerMiddle)
+    newLayerMiddle.addLayer(sliceMiddle)
 
-    layerFrame.setWidth(width)
-    layerFrame.setHeight(height)
-    layerOffset(layerCopy, (layerSize-width)/2, (layerSize-height)/2) //align centre
-    [doc showMessage: "Readied your slice!😉  Width: " + width + ";  Height:" + height];
+    var newLayerSmall = createNewArtboardFromSelection(layer,1);
+    newLayerSmall.addLayer(layerSmall)
+    newLayerSmall.addLayer(sliceSmall)
 
-    var p = createNewArtboardFromSelection(layer);
-    p.addLayer(layerCopy)
-    p.addLayer(a)
-
-    [view zoomToFitRect:[p rect]]
-
+    [view centerRect:[newLayerMiddle rect]]
 
      //toward multifarious selection...just wait...
 
     // var _layer = sel.objectAtIndex(0);
     // var sel = doc.findSelectedLayers();
+
+    function sizeOffset(sizeA,sizeB) {
+
+        var frame = [layer frame],
+            height = [frame height],
+            width = [frame width],
+            scale;
+
+        var layerCopy = layer.copy(),
+            layerFrame = layerCopy.frame()
+
+        if (height >= width) {
+            scale = sizeA / height;
+            height = sizeA;
+            originWidth = scale * width;
+            width = originWidth.toFixed(2)
+        } else {
+            scale = sizeA / width;
+            width = sizeA;
+            originHeight = scale * height;
+            height = originHeight.toFixed(2)
+        }
+
+        layerFrame.setWidth(width)
+        layerFrame.setHeight(height)
+        layerOffset(layerCopy, (sizeB - width) / 2, (sizeB - height) / 2) //align centre
+
+        return layerCopy;
+
+    }
+
+      function creatSliceLayer(size){
+        var a = MSSliceLayer.new(),
+        aFrame = a.frame();
+
+        aFrame.setWidth(size);
+        aFrame.setHeight(size);
+
+        return a;
+    }
 
     function changeSizeWithBorder(layer,size){
 
@@ -123,18 +151,18 @@ var onRun = function(context) {
     }
 
 
-    function createNewArtboardFromSelection(selectedItem,size) {
+    function createNewArtboardFromSelection(selectedItem,multiple) {
         selectedItemRect = [selectedItem absoluteRect]
         newArtboardWidth = [selectedItemRect width]
         newArtboardHeight = [selectedItemRect height])
-        newArtboardX = rightmostArtboardX() + 100
+        newArtboardX = rightmostArtboardX() + 50
         newArtboardY = topmostArtboardY()
 
         newArtboard = [MSArtboardGroup new]
         newArtboardFrame = [newArtboard frame]
-        [newArtboard setName:"New Slice"]
-        [newArtboardFrame setWidth:layerSize]
-        [newArtboardFrame setHeight:layerSize]
+        [newArtboard setName:"New Slice"+" @"+multiple+"x"]
+        [newArtboardFrame setWidth:layerSize*multiple]
+        [newArtboardFrame setHeight:layerSize*multiple]
         [newArtboardFrame setX:newArtboardX]
         [newArtboardFrame setY:newArtboardY]
 
