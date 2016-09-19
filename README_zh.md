@@ -8,8 +8,7 @@ Coffee-Slice
 ## 安装步骤
 
 1. 下载插件并解压
-2. 将`Coffee Slice.sketchplugin`复制到sketch的插件文件夹 ('Sketch App Menu' -> 'Plugins' -> 'Manage Plugins...' -> 'Gear Icon' -> 'Show Plugins Folder').
-（双击`Coffee Slice.sketchplugin`安装亦可）
+2. 双击`Coffee Slice.sketchplugin`安装
 
 ## 用法
 
