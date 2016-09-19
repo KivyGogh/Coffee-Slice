@@ -1,7 +1,7 @@
 Coffee-Slice
 ===========
 
-一个简单的Sketch切图插件。根据用户给出的目标容器尺寸，自动切出当前icon到新的Artboard。自动计算icon的描边属性、宽度，对icon进行缩放、贴边处理。添加切图图层，自动生成基于@1x/@2x/@3x分辨率的成品切图。
+一个简单的Sketch切图插件。根据用户给出的目标容器尺寸，自动计算icon的描边属性、宽度，对icon进行缩放、贴边处理。添加切图图层，自动生成基于@1x/@2x/@3x分辨率的成品切图。
 
    ![demo](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/demo.gif)
 
