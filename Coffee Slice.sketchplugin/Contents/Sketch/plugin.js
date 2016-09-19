@@ -14,9 +14,9 @@ var onRun = function(context) {
     }
 
 
-    var doc = context.document, 
-        selection = context.selection, 
-        view = [doc currentView],
+    var doc = context.document,
+        selection = context.selection,
+        view = doc.currentView(),
         layer = selection[0];
 
     if (selectionContainsArtboards(context)) { 
@@ -90,8 +90,8 @@ var onRun = function(context) {
             width = [frame width],
             scale;
 
-        var layerCopy = layer.copy(),
-            layerFrame = layerCopy.frame()
+        var layerCopy = [layer copy],
+            layerFrame = [layerCopy frame]
 
         if (height >= width) {
             scale = sizeA / height;
@@ -105,8 +105,8 @@ var onRun = function(context) {
             height = originHeight.toFixed(2)
         }
 
-        layerFrame.setWidth(width)
-        layerFrame.setHeight(height)
+        [layerFrame setWidth:width]
+        [layerFrame setHeight:height]
         layerOffset(layerCopy, (sizeB - width) / 2, (sizeB - height) / 2) //align centre
 
         return layerCopy;
@@ -115,10 +115,10 @@ var onRun = function(context) {
 
       function creatSliceLayer(size){
         var a = MSSliceLayer.new(),
-        aFrame = a.frame();
+        aFrame = [a frame];
 
-        aFrame.setWidth(size);
-        aFrame.setHeight(size);
+        [aFrame setWidth:size];
+        [aFrame setHeight:size];
 
         return a;
     }
@@ -134,7 +134,7 @@ var onRun = function(context) {
             borderSize = [[selStyle border] thickness]
             borderPosition = [[selStyle border] position]
 
-            if (borderEnabled == "1" && layer.style().border()) {
+            if (borderEnabled == "1" && [selStyle border]) {
                 if (borderPosition == "0") {
                     borderSize = borderSize / 2;
                     size = size - 2 * borderSize;

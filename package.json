@@ -1,7 +1,7 @@
 {
   "name": "coffeeslice",
-  "version": "1.0.0",
-  "description": "A Sketch that can slice your icon to a new Artboard by a variable size given by yourself,making your icon touch to the edge of its viewBox by scaling and border testing automatically.",
+  "version": "1.0 beta 2",
+  "description": "A Sketch plugin to make the standard slicing with a user-given viewBox size automatically and creating multiple sizes(1x/2x/3x) of your slices.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

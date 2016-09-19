@@ -4,7 +4,7 @@
   "version": "1.0 beta 2",
   "identifier": "com.sketchapps.coffee-slice",
   "homepage": "https://github.com/KivyGogh/Coffee-Slice",
-  "description" : "Simple slice.",
+  "description" : "Simple slicing.",
   "commands": [
     {
       "script": "plugin.js",
