@@ -7,7 +7,7 @@ A small Sketch plugin that can slice your icon to a new Artboard by a variable s
 
 ## Installation
 
-1. Download [Coffee slice - v1.0.zip](https://github.com/KivyGogh/Coffee-Slice/blob/master/installer-package/Coffee-Slice.sketchplugin.zip) archive with the plugin.
+1. Download [Coffee slice - v1.0.zip](https://github.com/KivyGogh/Coffee-Slice/blob/master/installer-package/Coffee-Slice.sketchplugin.zip?raw=true) archive with the plugin.
 2. Reveal plugins folder in finder ('Sketch App Menu' -> 'Plugins' -> 'Manage Plugins...' -> 'Gear Icon' -> 'Show Plugins Folder').
 3.Double-click `Coffee Slice.sketchplugin` file inside it.
 
