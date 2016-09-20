@@ -29,6 +29,11 @@ var onRun = function(context) {
         return;
     }
 
+    var frame = [layer frame],
+        height = [frame height],
+        width = [frame width],
+        scale;
+
     function layerOffset(layer, x, y) {
         var rect = layer.rect();
         rect.origin.x = x;
@@ -42,27 +47,26 @@ var onRun = function(context) {
 
     if (defSize == "") defSize = DEFAULT_SIZE;
 
-    var iconSize = changeSizeWithBorder(layer,defSize);
+    var iconSize = changeSizeWithBorder(layer,defSize),
         layerSize = defSize;
 
 
     var action = actionWithType("MSCanvasActions", context);
 
 
-    var sliceSmall = creatSliceLayer(layerSize);
+    var sliceSmall = creatSliceLayer(layerSize),
+        sliceMiddle = creatSliceLayer(layerSize*2),
+        sliceBig = creatSliceLayer(layerSize*3);
+
     sliceSmall.setName("Undefined New Slice @1x");
-
-    var sliceMiddle = creatSliceLayer(layerSize*2);
     sliceMiddle.setName("Undefined New Slice @2x");
-
-    var sliceBig = creatSliceLayer(layerSize*3);
     sliceBig.setName("Undefined New Slice @3x");
 
-    var layerSmall = sizeOffset(iconSize,layerSize);
-    var layerMiddle = sizeOffset(iconSize*2,layerSize*2);
-    var layerBig = sizeOffset(iconSize*3,layerSize*3);
+    var layerSmall = sizeOffset(changeSizeWithBorder(layer,defSize),layerSize),
+        layerMiddle = sizeOffset(changeSizeWithBorder(layer,defSize*2),layerSize*2),
+        layerBig = sizeOffset(changeSizeWithBorder(layer,defSize*3),layerSize*3);
 
-    [doc showMessage: "Readied your slices!😉"];
+    [doc showMessage: "Readied your slices!😉"+iconSize];
 
     var newLayerBig = createNewArtboardFromSelection(layer,3);
     newLayerBig.addLayer(layerBig)
@@ -85,29 +89,24 @@ var onRun = function(context) {
 
     function sizeOffset(sizeA,sizeB) {
 
-        var frame = [layer frame],
-            height = [frame height],
-            width = [frame width],
-            scale;
-
         var layerCopy = [layer copy],
             layerFrame = [layerCopy frame]
 
         if (height >= width) {
             scale = sizeA / height;
-            height = sizeA;
+            layerHeight = sizeA;
             originWidth = scale * width;
-            width = originWidth.toFixed(2)
+            layerWidth = originWidth.toFixed(2)
         } else {
             scale = sizeA / width;
-            width = sizeA;
+            layerWidth = sizeA;
             originHeight = scale * height;
-            height = originHeight.toFixed(2)
+            layerHeight = originHeight.toFixed(2)
         }
 
-        [layerFrame setWidth:width]
-        [layerFrame setHeight:height]
-        layerOffset(layerCopy, (sizeB - width) / 2, (sizeB - height) / 2) //align centre
+        [layerFrame setWidth:layerWidth]
+        [layerFrame setHeight:layerHeight]
+        layerOffset(layerCopy, (sizeB - layerWidth) / 2, (sizeB - layerHeight) / 2) //align centre
 
         return layerCopy;
 
