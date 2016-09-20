@@ -7,7 +7,7 @@ Coffee-Slice
 
 ## 安装步骤
 
-1. 下载插件并解压
+1. 下载插件[Coffee slice - v1.0.zip](https://github.com/KivyGogh/Coffee-Slice/installer-package/Coffee-Slice.sketchplugin.zip)并解压
 2. 双击`Coffee Slice.sketchplugin`安装
 
 ## 用法
