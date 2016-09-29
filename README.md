@@ -45,7 +45,7 @@ The icon will duplicate in a new Artboard with the size you given before,a layer
 
    ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave1.png)
 
-#### 2.Choose your Artboard's base size and which type of icons you need
+#### 2.Choose your Artboard's base size and which type of icons you need(PNG or SVG)
 
    ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave2.png)
 
