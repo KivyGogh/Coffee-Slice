@@ -1,24 +1,58 @@
+
 {
-  "name": "🙉 Coffee Slice",
-  "author": "goudan",
-  "version": "1.0 beta 2",
-  "identifier": "com.sketchapps.coffee-slice",
-  "homepage": "https://github.com/KivyGogh/Coffee-Slice",
+  "name" : "🙉 Coffee Slice",
+  "identifier" : "com.sketchapps.coffee-slice",
+  "version" : "1.0",
   "description" : "Simple slicing.",
-  "commands": [
+  "author" : "goudan",
+  "homepage": "https://github.com/KivyGogh/Coffee-Slice",
+  "commands" : [
     {
-      "script": "plugin.js",
-      "handler": "onRun",
-      "shortcut": "control shift k",
-      "name": "🙉 Coffee Slice",
-      "identifier": "setup-iconset-artboards"
+      "script" : "plugin.js",
+      "handler" : "onRun",
+      "shortcut" : "control command k",
+      "name" : "Just Slice",
+      "identifier" : "onRun"
+    },
+     {
+      "script" : "exportbigpng.js",
+      "handler" : "exportBaseBigPng",
+      "shortcut" : "",
+      "name" : "Export PNG Slices (base 2x)",
+      "identifier" : "exportBaseBigPng"
+    },
+
+    {
+      "script" : "exportsmallpng.js",
+      "handler" : "exportBaseSmallPng",
+      "shortcut" : "",
+      "name" : "Export PNG Slices (base 1x)",
+      "identifier" : "exportBaseSmallPng"
+    },
+    {
+      "script" : "exportbigsvg.js",
+      "handler" : "exportBaseBigSvg",
+      "shortcut" : "",
+      "name" : "Export SVG Slices (base 2x)",
+      "identifier" : "exportBaseBigSvg"
+    },
+
+    {
+      "script" : "exportsmallsvg.js",
+      "handler" : "exportBaseSmallSvg",
+      "shortcut" : "",
+      "name" : "Export SVG Slices (base 1x)",
+      "identifier" : "exportBaseSmallSvg"
     }
   ],
+
   "menu": {
-    "isRoot": true,
     "items": [
-      "setup-iconset-artboards"
-    ],
-    "title": "🙉 Coffee Slice"
+      "onRun",
+      "exportBaseBigPng",
+      "exportBaseSmallPng",
+      "exportBaseBigSvg",
+      "exportBaseSmallSvg"
+    ]
   }
 }

@@ -1,3 +1,5 @@
+
+
 var onRun = function(context) {
 
     var DEFAULT_SIZE = 24;
@@ -66,7 +68,7 @@ var onRun = function(context) {
         layerMiddle = sizeOffset(changeSizeWithBorder(layer,defSize*2),layerSize*2),
         layerBig = sizeOffset(changeSizeWithBorder(layer,defSize*3),layerSize*3);
 
-    [doc showMessage: "Readied your slices!😉"+iconSize];
+    [doc showMessage: "Readied your slices!😉"];
 
     var newLayerBig = createNewArtboardFromSelection(layer,3);
     newLayerBig.addLayer(layerBig)
