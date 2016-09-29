@@ -39,23 +39,24 @@ The icon will duplicate in a new Artboard with the size you given before,a layer
 
    ![readied](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/readied.png)
 
+
 ### Slice and Autosave
 
 #### 1.Select the icon that you want to slice
 
-   ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave1.png)
+   ![autosave](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave1.png)
 
 #### 2.Choose your Artboard's base size and which type of icons you need(PNG or SVG)
 
-   ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave2.png)
+   ![autosave](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave2.png)
 
 #### 3.Choose a path to save
 
-   ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave3.png)
+   ![autosave](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave3.png)
 
 #### 4.You can find them in the given path
 
-   ![selection](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave4.png)
+   ![autosave](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/autosave4.png)
 
 
 
