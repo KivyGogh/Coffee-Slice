@@ -3,11 +3,11 @@ Coffee-Slice
 
 A small Sketch plugin that can slice your icon to a new Artboard by a variable size given by yourself,making your icon touch to the edge of its viewBox by scaling and border testing automatically and creating multiple sizes(1x/2x/3x) of your slices,you can choose autosave or not.
 
-## Simple Slicing:
+### Simple Slicing:
 
    ![demo](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/demo1.gif)
 
-## Slice and Autosave by multiple sizes:
+### Slice and Autosave by multiple sizes:
 
    ![demo](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/demo2.gif)
 
