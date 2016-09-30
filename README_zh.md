@@ -64,7 +64,7 @@ Coffee-Slice
 
 ## 反馈
 
-如果你有什么疑问，或者有什么建议和意见, 请 [提出issue](https://github.com/kivygogh/Coffee-Slice/issues) 或者给我发电子邮件: **qiwei.gao@studenti.polito.it**
+如果你有什么疑问，或者有什么建议和意见, 请 [提出issue](https://github.com/kivygogh/Coffee-Slice/issues) 或者给我发电子邮件: **oohmyv@gmail.com**
 
 ## 版权声明
 
