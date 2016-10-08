@@ -3,6 +3,8 @@ Coffee-Slice
 
 切图这么简单的事，就不要人工来做了吧？
 
+   ![logo](https://github.com/KivyGogh/Coffee-Slice/blob/master/img/pic.png)
+
 前端：我需要24x24的icon<br>
 UI：23.5x44可以吗……
 
