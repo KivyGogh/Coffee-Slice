@@ -1,8 +1,8 @@
-#Coffee-Slice
+Coffee-Slice
+===========
 
 这是一个简单的Sketch切图插件。
 
-***
 
 前端：我需要24x24的icon<br>
 UI：23.5x44可以吗……
