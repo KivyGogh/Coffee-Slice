@@ -282,11 +282,6 @@ var exportBaseSmallPng = function(context) {
 
     // [view centerRect:[newLayerMiddle rect]]
 
-     //toward multifarious selection...just wait...
-
-    // var _layer = sel.objectAtIndex(0);
-    // var sel = doc.findSelectedLayers();
-
     function sizeOffset(sizeA,sizeB) {
 
         var layerCopy = [layer copy],
