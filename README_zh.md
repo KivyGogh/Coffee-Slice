@@ -30,6 +30,7 @@ UI：23.5x44可以吗……
 
 1. 下载插件[Coffee slice - v2.0.zip](https://github.com/KivyGogh/Coffee-Slice/blob/master/installer-package/Coffee-Slice.sketchplugin.zip?raw=true)并解压
 2. 双击`Coffee Slice.sketchplugin`安装
+3. 如果第二步中没有安装成功，请在sketch界面中选择：'Plugins' -> 'Manage Plugins...' -> '左下角工具图标' -> 'Show Plugins Folder'，将 Coffee Slice.sketchplugin 复制到该文件夹中
 
 ## 用法
 
